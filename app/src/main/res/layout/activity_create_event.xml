@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mohit.eventmanagement.AuthenticationActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/BackgroundStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Eventname-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" >
+
+            <TextView
+                style="@style/CreateEventStyle"
+                android:text="Event name"/>
+
+            <EditText
+                android:id="@+id/create_eventname"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                style="@style/CreateEventEditTextStyle"/>
+
+        </LinearLayout>
+
+        <!-- loaction -->
+        <LinearLayout
+            android:id="@+id/container_loaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp">
+
+            <!-- Label -->
+            <TextView
+                android:text="Location"
+                style="@style/CreateEventStyle"/>
+
+            <!-- Input field -->
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Gender drop-down spinner -->
+                <Spinner
+                    android:id="@+id/create_spinner_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:paddingRight="16dp"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Venue-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" >
+
+            <TextView
+                style="@style/CreateEventStyle"
+                android:text="Venue"/>
+
+            <EditText
+                android:id="@+id/create_venue"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                style="@style/CreateEventEditTextStyle" />
+        </LinearLayout>
+
+        <!--Date-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp" >
+
+            <!-- Label -->
+            <TextView
+                android:text="Date"
+                style="@style/CreateEventStyle"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/create_dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showDatePickerDialog"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:paddingTop="16dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Time-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp" >
+
+            <!-- Label -->
+            <TextView
+                android:text="Time"
+                style="@style/CreateEventStyle"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/create_timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showTimePickerDialog"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:paddingTop="16dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Number of tickets-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" >
+
+            <TextView
+                style="@style/CreateEventStyle"
+                android:text="Number of Tickets"/>
+
+            <EditText
+                android:id="@+id/create_numberOfTickets"
+                android:inputType="number"
+                android:maxLines="1"
+                style="@style/CreateEventEditTextStyle"/>
+
+        </LinearLayout>
+
+        <!--Price-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" >
+
+            <TextView
+                style="@style/CreateEventStyle"
+                android:text="Price"/>
+
+            <EditText
+                android:id="@+id/create_price"
+                android:inputType="number"
+                android:maxLines="1"
+                style="@style/CreateEventEditTextStyle"/>
+
+        </LinearLayout>
+
+        <!--Description-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Description"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/create_description"
+            android:maxLines="3"
+            android:hint="not more than 250 characters"
+            android:textColorHint="@color/white"
+            android:inputType="textCapSentences"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/create_submitButton"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="64dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mohit.eventmanagement.BookTicketActivity"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    style="@style/BackgroundStyle">
+
+    <TextView
+        android:text="Number of Seats"
+        style="@style/BookTicketActivityStyle"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/book_minusButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"/>
+
+        <TextView
+            android:id="@+id/book_numberOfSeats"
+            style="@style/BookTicketActivityStyle" />
+
+        <Button
+            android:id="@+id/book_addButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Price of one ticket = "
+            style="@style/BookTicketActivityStyle"/>
+
+        <TextView
+            android:id="@+id/book_price"
+            style="@style/BookTicketActivityStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Total = "
+            style="@style/BookTicketActivityStyle"/>
+
+        <TextView
+            android:id="@+id/book_total"
+            style="@style/BookTicketActivityStyle" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/book_bookTicketButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="Book Ticket"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

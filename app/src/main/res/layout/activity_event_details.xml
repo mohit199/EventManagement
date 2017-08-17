@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mohit.eventmanagement.EventDetailsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/BackgroundStyle">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!--Eventname-->
+        <TextView
+            android:id="@+id/detail_eventname"
+            android:hint="Eventname"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_margin="25dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <!--venue,location-->
+        <TextView
+            android:id="@+id/detail_venuelocation"
+            style="@style/EventDetailsStyle"
+            android:hint="venue, location"/>
+
+        <!--time, date-->
+        <TextView
+            android:id="@+id/detail_timedate"
+            style="@style/EventDetailsStyle"
+            android:hint="Time, Date"/>
+
+        <!--price-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Price: "
+                style="@style/EventDetailsStyle"/>
+
+            <TextView
+                android:id="@+id/detail_price"
+                android:hint="200"
+                style="@style/EventDetailsStyle"/>
+        </LinearLayout>
+
+        <!--tickets left-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Tickets left: "
+                style="@style/EventDetailsStyle"/>
+
+            <TextView
+                android:id="@+id/detail_numberOfTickets"
+                android:hint="200"
+                style="@style/EventDetailsStyle"/>
+        </LinearLayout>
+
+        <!--Description heading-->
+        <TextView
+            style="@style/EventDetailsStyle"
+            android:text="Description:"/>
+
+        <!--Description-->
+        <TextView
+            android:id="@+id/detail_description"
+            android:hint="This part contains the description. bla bla bla bla."
+            style="@style/EventDetailsStyle"/>
+
+        <!--Book Ticket Button-->
+        <Button
+            android:id="@+id/detail_bookTicketButton"
+            style="@style/EventDetailsStyle"
+            android:layout_margin="25dp"
+            android:layout_gravity="center"
+            android:text="Book Ticket"/>
+
+    </LinearLayout>
+</ScrollView>

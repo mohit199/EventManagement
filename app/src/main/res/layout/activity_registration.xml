@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mohit.eventmanagement.AuthenticationActivity"
+    style="@style/BackgroundStyle">
+
+    <!--firstname-->
+    <TextView
+        android:layout_marginTop="32dp"
+        android:text="First name"
+        style="@style/RegistrationTextViewStyle"/>
+
+    <EditText
+        android:id="@+id/register_firstname"
+        android:inputType="textCapWords"
+        style="@style/RegistrationEditTextStyle" />
+
+    <!--lastname-->
+    <TextView
+        android:text="Last name"
+        style="@style/RegistrationTextViewStyle"/>
+
+    <EditText
+        android:id="@+id/register_lastname"
+        android:inputType="textCapWords"
+        style="@style/RegistrationEditTextStyle" />
+
+    <!--username-->
+    <TextView
+        android:text="Username"
+        style="@style/RegistrationTextViewStyle"/>
+
+    <EditText
+        android:id="@+id/register_username"
+        android:inputType="text"
+        style="@style/RegistrationEditTextStyle"/>
+
+    <!--password-->
+    <TextView
+        android:text="Password"
+        style="@style/RegistrationTextViewStyle"/>
+
+    <EditText
+        android:id="@+id/register_password"
+        android:inputType="textPassword"
+        style="@style/RegistrationEditTextStyle" />
+
+    <CheckBox
+        android:id="@+id/register_isArtist"
+        android:text="I am an Artist"
+        style="@style/RegistrationTextViewStyle"/>
+
+    <Button
+        android:id="@+id/register_submit"
+        android:text="Submit"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        style="@style/RegistrationTextViewStyle" />
+
+
+
+</LinearLayout>
